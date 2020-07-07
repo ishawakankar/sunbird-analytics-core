@@ -332,6 +332,7 @@ class TestCommonUtil extends BaseSpec {
       val sc = CommonUtil.getSparkContext(10, "Test", Option("10.0.0.0"), Option("10.0.0.0"), Option("10.0.0.0"), Option("2"));
       sc.stop();
     }
+    CommonUtil.getSparkSession(10, "Test", Option("10.0.0.0"), Option("10.0.0.0"), Option("Quorum"))
 
     noException should be thrownBy {
       val sc = CommonUtil.getSparkSession(10, "Test", Option("10.0.0.0"), Option("10.0.0.0"), Option("Quorum"))
